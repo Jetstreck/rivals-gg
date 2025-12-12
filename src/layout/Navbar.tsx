@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes, FaCaretUp } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,16 +13,17 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-4 z-50 flex w-full justify-center px-4">
-      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between gap-8 rounded-full border-2 border-white/40 bg-white/20 px-16 py-8 shadow-lg backdrop-blur-md" style={{ minHeight: '80px', paddingTop: '1rem', paddingBottom: '1rem', paddingLeft: '4rem', paddingRight: '4rem' }}>
+      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between gap-8 rounded-full border-2 border-white/30 bg-white/10 px-16 py-8 shadow-lg backdrop-blur-md" style={{ minHeight: '80px', paddingTop: '1rem', paddingBottom: '1rem', paddingLeft: '4rem', paddingRight: '4rem' }}>
         {/* Left: Brand */}
         <Link 
           to="/" 
           className="inline-flex items-center gap-1 rounded-full px-2"
         >
-          <span className="text-xl font-medium lowercase text-white">
-            rivals gg
-          </span>
-          <FaCaretUp className="h-3 w-3 text-white/70" />
+          <img 
+            src="/assets/images/teks-logo-3.png" 
+            alt="rivals gg" 
+            className="h-12 object-contain drop-shadow-lg shadow-black/50"
+          />
         </Link>
 
         {/* Center: Nav links - Desktop */}
